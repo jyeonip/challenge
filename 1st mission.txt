@@ -9,5 +9,37 @@ Rest API(Representational State Transfer Application Programming Interface)
 책 정보 생성    : POST        /library/book
 책 목록 가져오기: GET         /library/book/list
 책 정보 읽기    : GET         /library/book/:id
-책 정보 갱신    : PATCH       /library/book/:id
+책 정보 갱신    : PATCH(PUT)  /library/book/:id
 책 정보 삭제    : DELETE      /libarary/book/:id
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
+# create -> POST 책 정보 생성
+@app.route('/', methods = ["POST"])
+def book_info_create():
+    
+# READ -> GET 목록 가져오기
+@app.route('/', methods = ["GET"])
+def book_category():
+    
+# READ -> GET 책 정보 읽기
+@app.route('/', methods = ["GET"])
+def book_category():
+    
+# UPDATE -> PATCH 정보 갱신(PUT 쓸 수도 있음)
+@app.route('/', methods = ["PATCH"])
+def book_category():
+
+# UPDATE -> DELETE 정보 삭제
+@app.route('/', methods = ["DELETE"])
+def book_category():
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
