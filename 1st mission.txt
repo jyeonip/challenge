@@ -1,0 +1,13 @@
+# challenge
+Rest API(Representational State Transfer Application Programming Interface)
+● 자원 중심 설계
+● HTTP 프로토콜 메소드(GET, POST, PUT, DELETE 등)사용 --> 해당 자원에 대한 CRUD(Create, Read, Update, Delete)작업 수행
+● Statelessness: 서버가 클라이언트의 상태를 기억하지 않는다. 각 API 요청을 다른 청과 독립적으로 처리
+
+도서관리 CRUD API 설계 (책 정보 생성, 책 목록 가져오기, 책 정보 읽기, 책 정보 갱신, 책 정보 삭제)
+                 HTTP 메서드    URI
+책 정보 생성    : POST        /library/book
+책 목록 가져오기: GET         /library/book/list
+책 정보 읽기    : GET         /library/book/:id
+책 정보 갱신    : PATCH       /library/book/:id
+책 정보 삭제    : DELETE      /libarary/book/:id
